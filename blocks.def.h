@@ -1,6 +1,7 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+	{"", "printf %s%s%s%s \"^c#DC7633^\" $($HOME/.local/bin/battery.sh) \"^d^\"",	60,		1},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" \"\uf1c0 \" $(date '+%S') \"^d^\"",	30,		1},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" \"\uf1c0 \" $(free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g) \"^d^\"",	30,		0},
 	{"", "printf %s%s%s%s \"^c#FFD900^\" \"\uf073 \" $(date '+%b %d (%a)') \"^d^\"",					5,		0},
