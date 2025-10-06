@@ -1,6 +1,7 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+	{"", "printf %s%s%s%s \"^c#DC7633^\" $($HOME/.local/bin/package_updates.sh) \"^d^\"",	3600,		0},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" $($HOME/.local/bin/cpu_usage.sh) \"^d^\"",	60,		0},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" CPU: $(sensors | grep CPU | awk '{print $2}') \"^d^\"",	60,		0},
 	{"", "printf %s%s%s%s \"^c#DC7632^\" $($HOME/.local/bin/volume.sh) \"^d^\"",	0,		2},
