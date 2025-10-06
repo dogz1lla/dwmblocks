@@ -2,7 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"", "printf %s%s%s%s \"^c#DC7633^\" $($HOME/.local/bin/cpu_usage.sh) \"^d^\"",	60,		0},
-	{"", "printf %s%s%s%s \"^c#DC7633^\" CPU: $(sensors | grep CPU | awk '{print $2}')C \"^d^\"",	60,		0},
+	{"", "printf %s%s%s%s \"^c#DC7633^\" CPU: $(sensors | grep CPU | awk '{print $2}') \"^d^\"",	60,		0},
 	{"", "printf %s%s%s%s \"^c#DC7632^\" $($HOME/.local/bin/volume.sh) \"^d^\"",	0,		2},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" $($HOME/.local/bin/battery.sh) \"^d^\"",	60,		1},
 	{"", "printf %s%s%s%s \"^c#DC7633^\" \"\uf1c0 \" $(free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g) \"^d^\"",	30,		0},
